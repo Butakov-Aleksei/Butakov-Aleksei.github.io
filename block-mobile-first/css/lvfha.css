@@ -1,0 +1,139 @@
+:root {
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-waterloo: #85859b;
+  --color-steel-gray: #212133;
+  --color-dove-gray: #666666;
+  --color-blue: #3f2aff;
+  --color-comet: #555681;
+  --color-ebony-clay: #2e2b44;
+  --color-white-lilac: #edf0f9;
+  --color-azure-radiance: #1188e4;
+  --color-lima: #6da71d;
+  --color-casablanca: #f6c055;
+}
+
+/* ~~~~~~~~~~~~~~~~~focus~~~~~~~~~~~~~~~~~~~~ */
+.header__logo,
+.nav__link,
+.hero__link,
+.courses__link,
+.social__link {
+  -webkit-transition: outline .3s ease-in-out, outline-offset .3s ease-in-out, border .3s ease-in-out, color .3s ease-in-out, background-color .3s ease-in-out, -webkit-transform .3s ease-in-out;
+  transition: outline .3s ease-in-out, outline-offset .3s ease-in-out, border .3s ease-in-out, color .3s ease-in-out, background-color .3s ease-in-out, -webkit-transform .3s ease-in-out;
+  -o-transition: outline .3s ease-in-out, outline-offset .3s ease-in-out, border .3s ease-in-out, transform .3s ease-in-out, color .3s ease-in-out, background-color .3s ease-in-out;
+  transition: outline .3s ease-in-out, outline-offset .3s ease-in-out, border .3s ease-in-out, transform .3s ease-in-out, color .3s ease-in-out, background-color .3s ease-in-out;
+  transition: outline .3s ease-in-out, outline-offset .3s ease-in-out, border .3s ease-in-out, transform .3s ease-in-out, color .3s ease-in-out, background-color .3s ease-in-out, -webkit-transform .3s ease-in-out;
+}
+
+.header__logo,
+.nav__link,
+.social__link {
+  border-radius: 3px;
+}
+
+.header__logo:focus,
+.nav__link:focus,
+.hero__link:focus,
+.courses__link:focus,
+.social__link:focus {
+  border: none;
+  outline: none;
+}
+
+.header__logo:focus-visible,
+.nav__link:focus-visible,
+.social__link:focus-visible {
+  border: none;
+  outline: 1px solid var(--color-white);
+  outline-offset: 5px;
+}
+
+.hero__link:focus-visible,
+.courses__link:focus-visible {
+  border: none;
+  outline: 1px solid var(--color-azure-radiance);
+  outline-offset: 5px;
+}
+
+/* ~~~~~~~~~~~~~~~~~hover~~~~~~~~~~~~~~~~~~~~ */
+@media (any-hover: hover) {
+  .header__logo:hover:not(:active),
+  .nav__link:hover:not(:active),
+  .hero__link:hover:not(:active),
+  .courses__link:hover:not(:active),
+  .social__link:hover:not(:active) {
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+
+  .nav__link:hover:not(:active) {
+    -webkit-text-decoration-line: underline;
+            text-decoration-line: underline;
+    -webkit-text-decoration-style: solid;
+            text-decoration-style: solid;
+    text-underline-offset: 5px;
+  }
+
+  .hero__link:hover:not(:active) {
+    color: var(--color-azure-radiance);
+    background-color: var(--color-white);
+  }
+
+  .social__link:hover:not(:active) {
+    color: var(--color-azure-radiance);
+    -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+
+  .article {
+    -webkit-transition: -webkit-transform .3s ease-in-out;
+    transition: -webkit-transform .3s ease-in-out;
+    -o-transition: transform .3s ease-in-out;
+    transition: transform .3s ease-in-out;
+    transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+  }
+
+  .article:hover:not(:active) {
+    -webkit-transform: scale(1.15) translateY(5%);
+        -ms-transform: scale(1.15) translateY(5%);
+            transform: scale(1.15) translateY(5%);
+  }
+}
+
+/* ~~~~~~~~~~~~~~~~~active~~~~~~~~~~~~~~~~~~~~ */
+.header__logo:active,
+.nav__link:active,
+.hero__link:active,
+.courses__link:active,
+.social__link:active {
+  outline: none;
+}
+
+.header__logo:active,
+.nav__link:active,
+.hero__link:active,
+.courses__link:active {
+  -webkit-transform: scale(.9);
+      -ms-transform: scale(.9);
+          transform: scale(.9);
+}
+
+.nav__link:active {
+  color: var(--color-white-lilac);
+  text-decoration: none;
+}
+
+.hero__link:active {
+  color: var(--color-white);
+  background-color: var(--color-azure-radiance);
+}
+
+.social__link:active {
+  color: var(--color-white);
+  -webkit-transform: scale(.9);
+      -ms-transform: scale(.9);
+          transform: scale(.9);
+}

@@ -1,0 +1,344 @@
+@media (min-width: 375px) {
+  .courses__content {
+    min-height: 373px;
+  }
+}
+
+@media (min-width: 576px) {
+  :root {
+    --gap: 31px;
+  }
+
+  .section {
+    padding-top: 80px;
+    padding-bottom: 55px;
+  }
+
+  .header {
+    padding-top: 30px;
+    padding-bottom: 25px;
+  }
+
+  .header__container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .header__logo {
+    margin-bottom: 34px;
+  }
+
+  .header__nav {
+    overflow: visible;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .nav__list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .hero {
+    padding-top: 77px;
+    padding-bottom: 137px;
+  }
+
+  .hero__title {
+    margin-bottom: 16px;
+    font-size: 50px;
+  }
+
+  .hero__descr {
+    margin-bottom: 63px;
+    font-size: 18px;
+    line-height: 150%; /* 27px */
+  }
+
+  .hero__link {
+    padding: 24px 76px;
+    font-size: 18px;
+  }
+
+  .about__wrapper {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  .about__bg {
+    display: block;
+    height: 134px;
+    background-image: url(../img/about/about_bg.png);
+  }
+
+  .about__benefits {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  .benefits__item {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .about__title {
+    margin-bottom: 18px;
+    font-size: 40px;
+    line-height: 100%;
+  }
+
+  .teachers__title {
+    margin-bottom: 23px;
+    font-size: 40px;
+  }
+
+  .teachers {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+
+  .article__img {
+    margin-bottom: 28px;
+  }
+
+  .courses {
+    padding-top: 75px;
+    padding-bottom: 81px;
+  }
+
+  .courses__title {
+    margin-bottom: 23px;
+    font-size: 40px;
+  }
+
+  .courses__sub-title {
+    max-width: 100%;
+  }
+
+  .courses__link {
+    padding: 21px 48px;
+  }
+
+  .courses__item:nth-child(1) .courses__bg {
+    background-image: url("../img/courses/courses-bg_1@576.png");
+  }
+
+  .courses__item:nth-child(2) .courses__bg {
+    background-image: url("../img/courses/courses-bg_2@576.png");
+  }
+
+  .courses__item:nth-child(3) .courses__bg {
+    background-image: url("../img/courses/courses-bg_3@576.png");
+  }
+
+  .courses__item:nth-child(4) .courses__bg {
+    background-image: url("../img/courses/courses-bg_4@576.png");
+  }
+
+  .courses__content {
+    padding-right: 18px;
+  }
+}
+
+@media (min-width: 425px) and (max-width: 768px) {
+  .teachers__item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --gap: 32px;
+  }
+
+  .section {
+    padding-bottom: 76px;
+  }
+
+  .header {
+    padding-bottom: 30px;
+  }
+
+  .header__logo {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    margin-bottom: 0;
+  }
+
+  .header__nav {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin-left: auto;
+    padding-bottom: 0;
+  }
+
+  .hero {
+    padding-top: 130px;
+    padding-bottom: 136px;
+  }
+
+  .hero__container::before {
+    display: block;
+  }
+
+  .about__wrapper {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .about__bg {
+    height: 187px;
+  }
+
+  .about__title {
+    margin-bottom: 17px;
+  }
+
+  .courses {
+    padding-bottom: 80px;
+  }
+
+  .courses__item:nth-child(1) .courses__bg {
+    background-image: url("../img/courses/courses-bg_1@768.png");
+  }
+
+  .courses__item:nth-child(2) .courses__bg {
+    background-image: url("../img/courses/courses-bg_2@768.png");
+  }
+
+  .courses__item:nth-child(3) .courses__bg {
+    background-image: url("../img/courses/courses-bg_3@768.png");
+  }
+
+  .courses__item:nth-child(4) .courses__bg {
+    background-image: url("../img/courses/courses-bg_4@768.png");
+  }
+
+  .courses__content {
+    padding-bottom: 119px;
+  }
+
+  .courses__sub-title {
+    line-height: 150%;
+  }
+
+  .courses__link {
+    padding: 21px 56px;
+  }
+}
+
+@media (min-width: 992px) {
+  .section {
+    padding-bottom: 80px;
+  }
+
+  .hero__title {
+    font-size: 60px;
+  }
+
+  .about__bg {
+    height: 142px;
+    background-size: contain;
+  }
+
+  .benefits__item {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  .about__title {
+    max-width: 60%;
+  }
+
+  .teachers {
+    padding-bottom: 76px;
+  }
+
+  .article__descr {
+    letter-spacing: .1px;
+  }
+
+  .courses__content {
+    min-height: 300px;
+  }
+
+  .courses__sub-title,
+  .courses__title {
+    color: var(--color-steel-gray);
+  }
+
+  .courses__link {
+    padding: 21px 59px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero {
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
+
+  .hero__container::before {
+    content: url("../img/hero_bg/hero_bg.png");
+    -webkit-transform: translateY(-49.5%);
+        -ms-transform: translateY(-49.5%);
+            transform: translateY(-49.5%);
+  }
+
+  .hero__title {
+    margin-bottom: 27px;
+  }
+
+  .hero__descr {
+    margin-bottom: 65px;
+  }
+
+  .courses {
+    padding-top: 72px;
+  }
+
+  .courses__timework {
+    right: 5px;
+  }
+
+  .courses__item:nth-child(1) .courses__bg {
+    background-image: url("../img/courses/courses-bg_1.png");
+  }
+
+  .courses__item:nth-child(2) .courses__bg {
+    background-image: url("../img/courses/courses-bg_2.png");
+  }
+
+  .courses__item:nth-child(3) .courses__bg {
+    background-image: url("../img/courses/courses-bg_3.png");
+  }
+
+  .courses__item:nth-child(4) .courses__bg {
+    background-image: url("../img/courses/courses-bg_4.png");
+  }
+}
