@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Konstruct</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body class="mp-reset page">
+
+  <!-- ~~~~~~~~~~~~~~~~~~header~~~~~~~~~~~~~~~~~~~~~~ -->
+  <header class="header">
+    <div class="header__top header__top_bg">
+      <div class="container header__top-container flex">
+        <a href="#" class="logo header__logo flex">
+          <img src="img/logo/logo-white.svg" alt="Логотип компании" class="logo__icon-white">
+        </a>
+        <h1 class="mp-reset header__title">
+          Partner with KONSTUCT
+        </h1>
+        <p class="mp-reset header__descr">
+          An award-winning construction management firm
+        </p>
+      </div>
+    </div>
+    <div class="header__bottom">
+      <div class="container header__bottom-container flex">
+        <a href="#" class="logo header__logo flex">
+          <img src="img/logo/logo-black.svg" alt="Логотип компании" class="logo__icon-black">
+        </a>
+        <nav class="nav header__nav flex">
+          <ul class="list-reset list header__list nav__list flex">
+            <li class="nav__item flex">
+              <a href="#" class="nav__link flex">
+                Home
+              </a>
+            </li>
+            <li class="nav__item flex">
+              <a href="#about" class="nav__link flex">
+                About
+              </a>
+            </li>
+            <li class="nav__item flex">
+              <a href="#services" class="nav__link flex">
+                Services
+              </a>
+            </li>
+            <li class="nav__item flex">
+              <a href="#get-in-touch" class="nav__link flex">
+                Work
+              </a>
+            </li>
+            <li class="nav__item flex">
+              <a href="#newsletter" class="nav__link flex">
+                Contact
+              </a>
+            </li>
+          </ul>
+          <button class="btn-reset btn-hover nav__btn flex"></button>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~about~~~~~~~~~~~~~~~~~~~~~~ -->
+    <section class="section about" id="about">
+      <div class="container">
+        <h2 class="mp-reset about__title section__title">
+          Our story
+        </h2>
+        <div class="about__wrapp flex">
+          <div class="about__content flex">
+            <h3 class="mp-reset about__sub-title">
+              Founded in&nbsp;2011 by&nbsp;John Mathew Smith, Konstruct has become the number one construction
+              management firm
+            </h3>
+            <p class="mp-reset about__descr">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+              ut&nbsp;laoreet dolore magna aliquam erat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+              diam nonummy nibh euismod tincidunt ut&nbsp;laoreet dolore magna aliquam erat.
+            </p>
+          </div>
+          <div class="about__picture flex">
+            <div class="about__work about__work_plan">
+              <h3 class="about__sub-caption mp-reset">
+                We plan
+              </h3>
+            </div>
+            <div class="about__work about__work_manage">
+              <h3 class="about__sub-caption mp-reset">
+                We manage
+              </h3>
+            </div>
+            <div class="about__work about__work_build">
+              <h3 class="about__sub-caption mp-reset">
+                We build
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~services~~~~~~~~~~~~~~~~~~~~~~ -->
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="services__top flex">
+          <h2 class="mp-reset services__title section__title">
+            Our&nbsp;capabilities
+          </h2>
+          <p class="mp-reset services__descr">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+            ut&nbsp;laoreet dolore magna aliquam erat.
+          </p>
+          <button class="btn-reset btn-hover services__btn">All services</button>
+        </div>
+        <ul class="list-reset services__items items flex">
+          <li class="services__item services__item_management item flex">
+            <h3 class="item__caption mp-reset">
+              Project and construction management
+            </h3>
+            <p class="item__descr mp-reset">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+              ut&nbsp;laoreet dolore magna aliquam erat.
+            </p>
+          </li>
+          <li class="services__item services__item_maintenance item flex">
+            <h3 class="item__caption mp-reset">
+              Structure audit and maintenance
+            </h3>
+            <p class="item__descr mp-reset">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+              ut&nbsp;laoreet dolore magna aliquam erat.
+            </p>
+          </li>
+          <li class="services__item services__item_factory item flex">
+            <h3 class="item__caption mp-reset">
+              Factory construction and modeling
+            </h3>
+            <p class="item__descr mp-reset">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+              ut&nbsp;laoreet dolore magna aliquam erat.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~get-in-touch~~~~~~~~~~~~~~~~~~~~ -->
+    <section class="section get-in-touch" id="get-in-touch">
+      <div class="container get-in-touch-container flex">
+        <h2 class="mp-reset section__title get-in-touch__title">
+          Want to build something amazing?
+        </h2>
+        <button class="btn-reset btn-hover get-in-touch__btn">Get in touch</button>
+      </div>
+    </section>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~newsletter~~~~~~~~~~~~~~~~~~ -->
+    <section class="section newsletter" id="newsletter">
+      <div class="container newsletter__container">
+        <form class="form newsletter__form flex" action="https://jsonplaceholder.typicode.com/posts" method="post">
+          <h2 class="mp-reset newsletter__title section__title">
+            Newsletter Signup
+          </h2>
+          <input class="form__input mp-reset" type="email" name="email" id="email" placeholder="test@youremail.com">
+          <button class="btn-reset btn-hover newsletter__btn" type="submit">
+            Signup
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <!-- footer -->
+  <footer class="footer">
+    <div class="footer__top footer-top">
+      <div class="container footer-top__container flex">
+        <div class="footer-top__company">
+          <h4 class="mp-reset footer-top__title">
+            Company
+          </h4>
+          <a href="#" class="logo footer-top__logo flex">
+            <img class="logo__icon-white" src="img/logo/logo-white.svg" alt="Логотип компании">
+          </a>
+          <p class="mp-reset footer-top__descr">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+            ut&nbsp;laoreet dolore magna aliquam erat.
+          </p>
+        </div>
+        <div class="footer-top__links">
+          <h4 class="mp-reset footer-top__title">
+            Links
+          </h4>
+          <ul class="list-reset footer-top__list footer-top-list grid">
+            <li class="footer-top-list__item">
+              <a href="#" class="footer-top-list__link flex">Home</a>
+            </li>
+            <li class="footer-top-list__item">
+              <a href="#" class="footer-top-list__link flex">About</a>
+            </li>
+            <li class="footer-top-list__item">
+              <a href="#" class="footer-top-list__link flex">Services</a>
+            </li>
+            <li class="footer-top-list__item">
+              <a href="#" class="footer-top-list__link flex">Projects</a>
+            </li>
+            <li class="footer-top-list__item">
+              <a href="#" class="footer-top-list__link flex">Contact us</a>
+            </li>
+            <li class="footer-top-list__item">
+              <a href="#" class="footer-top-list__link flex">FAQ</a>
+            </li>
+            <li class="footer-top-list__item">
+              <a href="#" class="footer-top-list__link flex">Terms</a>
+            </li>
+            <li class="footer-top-list__item">
+              <a href="#" class="footer-top-list__link flex">Careers</a>
+            </li>
+            <li class="footer-top-list__item">
+              <a href="#" class="footer-top-list__link flex"></a>
+            </li>
+            <li class="footer-top-list__item">
+              <a href="#" class="footer-top-list__link flex"></a>
+            </li>
+            <li class="footer-top-list__item">
+              <a href="#" class="footer-top-list__link flex">Blog</a>
+            </li>
+            <li class="footer-top-list__item">
+              <a href="#" class="footer-top-list__link flex">Partners</a>
+            </li>
+            <li class="footer-top-list__item">
+              <a href="#" class="footer-top-list__link flex">News</a>
+            </li>
+            <li class="footer-top-list__item">
+              <a href="#" class="footer-top-list__link flex"></a>
+            </li>
+            <li class="footer-top-list__item">
+              <a href="#" class="footer-top-list__link flex"></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-top__contact-us">
+          <h4 class="mp-reset footer-top__title">
+            Contact us
+          </h4>
+          <address class="address footer-top__address footer-top-address flex">
+            <p class="mp-reset footer-top-address__geolocation">
+              213 Baker Street Oriel City Kounty 7000&nbsp;KNW, Kountry Name
+            </p>
+            <a href="tel:+239942334022" class="footer-top-address__phone">
+              +23 994 233 4022
+            </a>
+            <a href="mail:info@konstruct.com" class="footer-top-address__mail">
+              info@konstruct.com
+            </a>
+          </address>
+        </div>
+        <div class="footer-top__social footer-top-social">
+          <h4 class="mp-reset footer-top__title footer-top-social__title">
+            Social links
+          </h4>
+          <ul class="list-reset footer-top-social__list flex">
+            <li class="footer-top-social__item flex">
+              <a href="#" class="footer-top-social__link flex" aria-label="facebook"></a>
+            </li>
+            <li class="footer-top-social__item flex">
+              <a href="#" class="footer-top-social__link flex" aria-label="twitter"></a>
+            </li>
+            <li class="footer-top-social__item flex">
+              <a href="#" class="footer-top-social__link flex" aria-label="google"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom flex">
+      <address class="address author footer__author">
+        &copy;&nbsp;2017 Konstruct Inc. Designed by&nbsp;Jane Kathryn Teo
+      </address>
+    </div>
+  </footer>
+</body>
+
+</html>
