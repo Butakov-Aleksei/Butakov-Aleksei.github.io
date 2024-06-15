@@ -17,16 +17,20 @@
     font-size: 45px;
   }
 
-  .nav__btn {
+  .header__accordion[open] .accordion__control {
+    margin-bottom: 15px;
+    margin-left: auto;
+  }
+  .accordion__btn {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     opacity: 1;
   }
 
-  .header__list {
+  /* .header__list {
     display: none;
-  }
+  } */
 }
 
 @media (max-width: 1024px) {
@@ -169,6 +173,13 @@
 }
 
 @media (max-width: 576px) {
+  .header__list {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: start;
+    padding-right: 100px;
+  }
+
   .about__content,
   .about__picture {
     width: 100%;
