@@ -267,6 +267,10 @@ a {
   height: 18px;
 }
 
+.header__accordion {
+  display: none;
+}
+
 .accordion__control {
   width: fit-content;
   box-sizing: border-box;
@@ -356,10 +360,6 @@ a {
           transition: color .3s ease-in-out, transform .3s ease-in-out;
           transition: color .3s ease-in-out, transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
 }
-
-/* .header__accordion[open] .accordion__control {
-  display: none;
-} */
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~main~~~~~~~~~~~~~~~~~~~~~~ */
