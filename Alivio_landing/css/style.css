@@ -1,0 +1,238 @@
+@font-face {
+  font-family: "Georgia";
+  font-weight: 400;
+  font-style: normal;
+
+  src: local("Georgia"), url("Georgia.eot");
+  src: url("../fonts/Georgia.woff2") format(woff2),
+  url("../fonts/Georgia.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Georgia";
+  font-weight: 700;
+  font-style: normal;
+
+  src: local("GeorgiaBold"), local("Georgia-Bold"), local("Georgia Bold"), local("Georgia_Bold"), url("GeorgiaBold.eot");
+  src: url("../fonts/GeorgiaBold.woff2") format(woff2),
+  url("../fonts/GeorgiaBold.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lato";
+  font-weight: 400;
+  font-style: normal;
+
+  src: local("LatoRegular"), local("Lato-Regular"), local("Lato Regular"), local("Lato_Regular"), url("LatoRegular.eot");
+  src: url("../fonts/LatoRegular.woff2") format(woff2),
+  url("../fonts/LatoRegular.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lato";
+  font-weight: 500;
+  font-style: normal;
+
+  src: local("LatoMedium"), local("Lato-Medium"), local("Lato Medium"), local("Lato_Medium"), url("LatoMedium.eot");
+  src: url("../fonts/LatoMedium.woff2") format(woff2),
+  url("../fonts/LatoMedium.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lato";
+  font-weight: 600;
+  font-style: normal;
+
+  src: local("LatoSemibold"), local("Lato-Semibold"), local("Lato Semibold"), local("Lato_Bold"), url("LatoSemibold.eot");
+  src: url("../fonts/LatoSemibold.woff2") format(woff2),
+  url("../fonts/LatoSemibold.woff") format("woff");
+  font-display: swap;
+}
+
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --accept: #01996d;
+  --how-it-work_color-descr: #424242;
+}
+
+html {
+  box-sizing: border-box;
+
+  scroll-behavior: smooth;
+}
+
+:is(*, ::before, ::after) {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.page {
+  min-width: 320px;
+  min-height: 10000px;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 100%;
+  color: var(--black);
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.mp-reset {
+  margin: 0;
+  padding: 0;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+}
+
+/* ~~~~~~~~~~~~~~~~~~how-it-works~~~~~~~~~~~~~~~~ */
+.how-it-work__top {
+  align-items: start;
+  justify-content: space-between;
+  margin-bottom: 52px;
+}
+
+.how-it-work__title {
+  line-height: 150%;
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--how-it-work_color-descr);
+}
+
+.how-it-work-top__title {
+  width: 584px;
+  font-family: Georgia;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 157%; /* 78.5px */
+  color: var(--accept);
+}
+
+.how-it-work-top__descr {
+  width: 670px;
+  line-height: 150%; /* 30px */
+  color: var(--how-it-work_color-descr);
+}
+
+.how-it-work-bottom__list {
+  flex-wrap: wrap;
+  counter-reset: number 0;
+
+  --offsets: 2;
+  --column-gap: 95px;
+  column-gap: 95px;
+  row-gap: 20px;
+}
+
+.how-it-work-bottom__item {
+  position: relative;
+  align-items: start;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: calc((100% - (var(--offsets) * var(--column-gap))) / (var(--offsets) + 1));
+  padding-top: 135px;
+  counter-increment: number 1;
+}
+
+.how-it-work-bottom__item:nth-child(3n+2) {
+  transform: translateY(220px);
+}
+
+.how-it-work-bottom__item::before {
+  content: "0"counter(number);
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: Georgia;
+  font-size: 150px;
+  font-weight: 400;
+  line-height: 140%;
+  color: rgba(1, 153, 109, .20);
+}
+
+.how-it-work-bottom__caption {
+  align-self: center;
+  margin-bottom: 55px;
+  font-family: Georgia, serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #000000;
+  text-align: center;
+}
+
+.how-it-work-bottom__item:nth-child(even) .how-it-work-bottom__caption {
+  align-self: flex-end;
+  text-align: right;
+}
+
+.how-it-work-bottom__descr {
+  line-height: 150%; /* 30px */
+  color: var(--how-it-work_color-descr);
+}
+
+.how-it-work-bottom__wrap-img {
+  margin-top: 60px;
+}
+
+.how-it-work-bottom__img {
+  border-radius: 12px;
+
+  object-fit: cover;
+  object-position: center;
+}
