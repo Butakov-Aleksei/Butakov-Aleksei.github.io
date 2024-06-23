@@ -216,7 +216,7 @@
 
 @media (max-width: 768px) {
   .hero {
-    height: 100vh;
+    height: auto;
     margin-bottom: 70px;
     padding-top: 80px;
     padding-bottom: 40px;
@@ -327,7 +327,7 @@
   }
 
   .story__video {
-    height: auto;
+    height: 290px;
   }
 
   .alivia__container {
