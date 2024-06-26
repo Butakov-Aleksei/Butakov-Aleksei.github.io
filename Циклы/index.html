@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Циклы</title>
+  <link rel="stylesheet" href="normalize.css">
+  <style>
+    html {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    :is(*, *::before, *::after) {
+      box-sizing: inherit;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      background-color: #1a1e06;
+      color: #def9f9;
+      font-size: 28px;
+      font-family: sans-serif;
+    }
+
+    @media (max-width: 576px) {
+      body {
+        font-size: 16px;
+      }
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+      margin: 0 auto;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-left: 30px;
+      padding-right: 15px;
+      max-width: 95%;
+      width: 100%;
+      min-height: 100vh;
+      border-radius: 50px 3px 100px 10px;
+      border: 6px groove #151201;
+      background-color: #073131;
+      overflow-x: scroll;
+      box-shadow: 0 0 10px 10px #f3f4f322;
+    }
+
+    h1,
+    h2,
+    h3 {
+      max-width: 80%;
+    }
+
+    h1,
+    h2 {
+      align-self: center;
+    }
+
+    h3 {
+      padding-left: 10%;
+    }
+
+    p {
+      width: 100%;
+      padding-left: 10%;
+      background-color: #142e05;
+      line-height: 150%;
+    }
+
+    pre {
+      display: flex;
+      justify-content: start;
+      width: 100%;
+      background-color: black;
+      border-radius: 20px;
+      overflow: auto;
+    }
+    
+    code {
+      font-family: sans-serif;
+      display: block;
+      line-height: 150%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Циклы</h1>
+    <h2>Последовательность чисел Фибоначчи</h2>
+    <pre>
+      <code>
+        let fibo = [1, 1];
+
+          for (let i = 1; i &lt; 5; ++i) {
+              fibo.push(fibo[i] + fibo[i&nbsp;&mdash; 1]);
+          }
+        console.log(fibo);
+      </code>
+    </pre>
+    <h3>Результат:</h3>
+    <p>[ 1, 1, 2, 3, 5, 8 ]</p>
+    <h2>Арифметическая прогрессия</h2>
+    <pre>
+      <code>
+        let arifm = [2, 7];
+
+          for (let i = 1; i &lt; 7; ++i) {
+              arifm.push(arifm[i] + (arifm[arifm.length&nbsp;&mdash; 1]&nbsp;&mdash; arifm[arifm.length&nbsp;&mdash; 2]));
+          }
+
+        console.log(arifm);
+      </code>
+    </pre>
+    <h3>Результат:</h3>
+    <p>[2, 7, 12, 17, 22, 27, 32, 37]</p>
+    <h2>Геометрическая прогрессия</h2>
+    <pre>
+      <code>
+        let geometr = [2, 7];
+
+          for (let i = 1; i &lt; 7; ++i) {
+              geometr.push(geometr[i] * (geometr[geometr.length&nbsp;&mdash; 1]&nbsp;/ geometr[geometr.length&nbsp;&mdash; 2]));
+          }
+
+        console.log(geometr);
+      </code>
+    </pre>
+    <h3>Результат:</h3>
+    <p>[2, 7, 24.5, 85.75, 300.125, 1050.4375, 3676.53125, 12867.859375]</p>
+  </div>
+</body>
+<script src="main.js"></script>
+
+</html>
