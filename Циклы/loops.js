@@ -10,7 +10,7 @@
 // Последовательность чисел Фибонначчи
 let fibo = [1, 1];
 
-for (let i = 1; i < 5; ++i) {
+for (let i = 1; i < 20; ++i) {
     fibo.push(fibo[i] + fibo[i - 1]);
 }
 console.log(fibo);
