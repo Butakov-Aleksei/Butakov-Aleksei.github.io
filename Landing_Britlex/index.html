@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,35 +9,54 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/media.css">
 </head>
-<body class="page">
+
+<body class="page" id="page">
   <header class="header">
     <div class="container">
       <div class="header__container flex">
-        <div class="header__wrap-logo wrap-logo flex">
+        <div class="header__wrap-logo wrap-logo flex dnon">
           <img class="wrap-logo__icon" src="img/logo_icon/Britlex@dekstop.svg" alt="Logo">
         </div>
-        <nav class="nav header__nav">
-          <ul class="list nav__list mp-reset flex">
-            <li class="item nav__item flex">
-              <a href="#" class="link nav__link flex">Home</a>
-            </li>
-            <li class="item nav__item flex">
-              <a href="#" class="link nav__link flex">Skills</a>
-            </li>
-            <li class="item nav__item flex">
-              <a href="#" class="link nav__link flex">About Us</a>
-            </li>
-            <li class="item nav__item flex">
-              <a href="#" class="link nav__link flex">Pricing</a>
-            </li>
-            <li class="item nav__item flex">
-              <a href="#" class="link nav__link flex">Contacts</a>
-            </li>
-          </ul>
-        </nav>
-        <button class="header__btn btn-reset flex">Let&rsquo;s Talk</button>
+        <div id="openModal" class="modal flex">
+          <div class="modal__dialog flex">
+            <div class="modal__content flex">
+              <div class="modal__header flex">
+                <div class="header__wrap-logo wrap-logo flex">
+                  <img class="wrap-logo__icon" src="img/logo_icon/Britlex@dekstop.svg" alt="Logo">
+                </div>
+                <a href="#close" class="modal__close" title="Закрыть" aria-label="Закрыть" aria-expanded="false"></a>
+              </div>
+              <div class="modal__body flex">
+                <nav class="nav header__nav flex">
+                  <ul class="list nav__list mp-reset flex">
+                    <li class="item nav__item flex">
+                      <a href="#" class="link nav__link flex">Home</a>
+                    </li>
+                    <li class="item nav__item flex">
+                      <a href="#" class="link nav__link flex">Skills</a>
+                    </li>
+                    <li class="item nav__item flex">
+                      <a href="#" class="link nav__link flex">About Us</a>
+                    </li>
+                    <li class="item nav__item flex">
+                      <a href="#" class="link nav__link flex">Pricing</a>
+                    </li>
+                    <li class="item nav__item flex">
+                      <a href="#" class="link nav__link flex">Contacts</a>
+                    </li>
+                  </ul>
+                </nav>
+                <a href="#" class="header__btn btn-reset flex">Let&rsquo;s Talk</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="#openModal" class="modal__open burger" aria-label="Open menu" aria-expanded="false">
+          <span class="burger__line"></span>
+        </a>
       </div>
     </div>
   </header>
 </body>
+
 </html>
