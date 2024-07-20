@@ -60,13 +60,13 @@ function getCurrentAge(birthdayYear = 1970, birthdayMonth = 1, birthdayDay = 1) 
     
     if (currentMonth < birthdayMonth) {
         currentAge = currentAge - 1;
-        console.log("раз");
+       // console.log("раз");
     } else if (currentMonth == birthdayMonth && currentDay < birthdayDay) {
         currentAge = currentAge - 1;
-        console.log("два");
+       // console.log("два");
     } else {
         currentAge = currentYear - birthdayYear;
-        console.log("три");
+       // console.log("три");
     }
     
     console.log(currentAge);
