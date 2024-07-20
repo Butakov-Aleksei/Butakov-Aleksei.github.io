@@ -70,6 +70,7 @@ function getCurrentAge(birthdayYear = 1970, birthdayMonth = 1, birthdayDay = 1) 
     }
     
     console.log(currentAge);
+    alert(`Ваш возраст: ${currentAge}`);
     return currentAge;
 }
 
