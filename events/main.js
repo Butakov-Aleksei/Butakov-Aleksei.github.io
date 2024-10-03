@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
   let colorInput = document.querySelector('.block-form__input');
   let colorBlock = document.querySelector('.block-paint');
   let clearBtn = document.querySelector('.block-form__btn');
+  let infoColorElem = document.querySelector('.info-color');
 
   //для текстового поля:
   colorInput.placeholder = "Введите цвет на агл.";
@@ -11,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
   //создаем функцию, которая будет красить наш блок
   function paintBlock() {
     colorBlock.style.backgroundColor = colorInput.value;
-    colorBlock.innerHTML = `Вы ввели цвет: <span style="font-weight:800;">${colorInput.value.trim().toLowerCase()}</span>`;
+    infoColorElem.innerHTML = `Вы ввели цвет: <span style="font-weight:800;">${colorInput.value.trim().toLowerCase()}</span>`;
     if (colorBlock.style.backgroundColor === "black" ||
       colorBlock.style.backgroundColor === "rgb(0, 0, 0)" ||
       colorBlock.style.backgroundColor === "#000" ||
@@ -41,11 +42,10 @@ document.addEventListener('DOMContentLoaded', function () {
   paintBlock();
 
   //создаем обработчик "click" для кнопки 'Очистить'
-   clearBtn.addEventListener('click', function () {
+  clearBtn.addEventListener('click', function () {
     colorBlock.style.removeProperty('background-color');
     colorInput.value = "";
     colorBlock.style.backgroundColor = colorInput.value;
-    colorBlock.style.color = 'black';
-    colorBlock.innerHTML = `Вы ввели цвет: <span style="font-weight:800;">${colorInput.value.trim().toLowerCase()}</span>`;
+    infoColorElem.innerHTML = `Вы ввели цвет: <span style="font-weight:800;">${colorInput.value.trim().toLowerCase()}</span>`;
   });
 });
