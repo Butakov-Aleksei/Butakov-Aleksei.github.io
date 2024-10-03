@@ -41,9 +41,9 @@ document.addEventListener('DOMContentLoaded', function () {
   paintBlock();
 
   //создаем обработчик "click" для кнопки 'Очистить'
-  clearBtn.addEventListener('click', function () {
-    // colorBlock.style.removeProperty('background-color');
-    colorInput.value = "gray";
+   clearBtn.addEventListener('click', function () {
+    colorBlock.style.removeProperty('background-color');
+    colorInput.value = "";
     colorBlock.style.backgroundColor = colorInput.value;
     colorBlock.style.color = 'black';
     colorBlock.innerHTML = `Вы ввели цвет: <span style="font-weight:800;">${colorInput.value.trim().toLowerCase()}</span>`;
