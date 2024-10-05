@@ -1,12 +1,10 @@
-
-// let idElem = 0;
-
 let dataStorage = localStorage.getItem(`item`)
 let taskArr = []
 if (dataStorage !== "" && dataStorage !== null) {
-    taskArr = JSON.parse(dataStorage)
+    taskArr = JSON.parse(localStorage.getItem('item'))
 }
 
+//выводим в консоль массив
 console.log(taskArr);
 
 //функция создания элемента на странице
@@ -40,7 +38,6 @@ function getNewTitle(text) {
     return title
 }
 
-
 //section
 let section = getElementBody('section')
 section.classList.add('section')
@@ -57,60 +54,67 @@ list.classList.add('list', 'list-reset', 'section__list')
 section.append(container)
 document.body.append(section)
 
-
-
-// renderTasks();
-
-
-//функция создания новой задачи, она же <li></li>
+// //функция создания новой задачи, она же <li></li>
 function getNewTaskItem(task) {
-    // idElem++
-    let taskItem = getElementBody('li')
-    taskItem.classList.add('list__item')
-    // taskItem.id = idElem;
+    let taskItem = getElementBody('li');
+    taskItem.classList.add('list__item');
 
-    let blockBtns = getElementBody('div')
-    blockBtns.classList.add('item__block-btns')
+    let blockBtns = getElementBody('div');
+    blockBtns.classList.add('item__block-btns');
 
-    let title = getNewTitle(task)
-    title.classList.add('item__title')
+    let title = getNewTitle(task);
+    title.classList.add('item__title');
 
-    //кнопка 'выполнено'
-    let btnOk = getNewBtn('Выполнено')
-    btnOk.classList.add('item__btn', 'item__btn_ok')
+    // кнопка 'выполнено'
+    let btnOk = getNewBtn('Выполнено');
+    btnOk.classList.add('item__btn', 'item__btn_ok');
     btnOk.onclick = function () {
-        taskItem.classList.add('list__item_style')
-        title.classList.add('item__title_color_white')
-        btnDel.classList.add('item__btn_del_style')
-        btnOk.remove()
-        btnChange.remove()
+        taskItem.classList.add('list__item_style');
+        title.classList.add('item__title_color_white');
+        btnDel.classList.add('item__btn_del_style');
+        btnOk.remove();
+        btnChange.remove();
     }
 
-    //кнопка 'изменить'
-    let btnChange = getNewBtn('Изменить')
-    btnChange.classList.add('item__btn', 'item__btn_change')
+    // кнопка 'изменить'
+    let btnChange = getNewBtn('Изменить');
+    btnChange.classList.add('item__btn', 'item__btn_change');
     btnChange.onclick = function () {
-        let newTask = prompt('Введите новую задачу', title.textContent)
+        let newTask = prompt('Введите новую задачу', title.textContent);
         if (newTask == null || newTask == '') {
-            newTask = title.textContent
+            newTask = title.textContent;
         }
-        title.textContent = newTask
-
+        // Удаляем старую задачу из массива и добавляем новую
+        const taskIndex = taskArr.indexOf(task);
+        if (taskIndex > -1) {
+            taskArr[taskIndex] = newTask;
+            localStorage.setItem(`item`, JSON.stringify(taskArr));
+        }
+        title.textContent = newTask;
     }
 
-    //кнопка 'удалить'
-    let btnDel = getNewBtn('Удалить')
-    btnDel.classList.add('item__btn', 'item__btn_del')
+    // кнопка 'удалить'
+    let btnDel = getNewBtn('Удалить');
+    btnDel.classList.add('item__btn', 'item__btn_del');
     btnDel.onclick = function () {
-        taskItem.remove()
-        // taskArr.push(newTask)
+        // Удаляем элемент из DOM
+        taskItem.remove();
 
+        // Найдем индекс задачи для удаления из массива
+        const taskIndex = taskArr.indexOf(task);
+        if (taskIndex > -1) {
+            // Удаляем задачу из массива
+            taskArr.splice(taskIndex, 1);
+        }
+
+        // Обновляем локальное хранилище
+        localStorage.setItem(`item`, JSON.stringify(taskArr));
     }
 
-    blockBtns.append(btnOk, btnChange, btnDel)
-    taskItem.append(title, blockBtns)
-    list.append(taskItem)
-    return taskItem
+    blockBtns.append(btnOk, btnChange, btnDel);
+    taskItem.append(title, blockBtns);
+    list.append(taskItem);
+    return taskItem;
 }
 
 
@@ -126,19 +130,16 @@ addBtn.classList.add('add-box__btn')
 
 
 addBtn.onclick = function () {
-    // idElem++
-
     let newTask = newTaskInp.value
     if (newTaskInp.value === '') newTask = 'Новая задача'
 
-
     // манипуляции с локальным хранилищем
-
-
     taskArr.push(newTask)
     localStorage.setItem(`item`, JSON.stringify(taskArr))
 
     let newTaskItem = getNewTaskItem(newTask)
+
+
     list.append(newTaskItem)
 
     newTaskInp.value = ''
@@ -151,5 +152,3 @@ for (let i of taskArr) {
 
 addBox.append(newTaskInp, addBtn)
 container.append(addBox, list)
-
-//блок со списком задач
