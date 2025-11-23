@@ -1,0 +1,68 @@
+.btn {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  justify-content: center;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: clamp(.938rem, .764rem + .87vw, 1.5rem);
+  color: $color-WhiteSmoke;
+  background-color: rgba($color-DimGrey, .8);
+  cursor: pointer;
+  user-select: none;
+  transition: background-color $transition-300, opacity $transition-300, box-shadow $transition-600;
+
+  @include focus-visible {
+    background-color: $color-DimGrey;
+    box-shadow: 0px 0px 6px 1px $color-Black inset;
+  }
+  @include any-hover {
+    background-color: $color-DimGrey;
+    box-shadow: 0px 0px 6px 1px $color-Black inset;
+  }
+
+  &[disabled] {
+    opacity: .5;
+    pointer-events: none;
+  }
+
+  &--start {
+    font-size: clamp(1rem, 0.514rem + 2.286vw, 2rem);
+    font-weight: 700;
+  }
+
+  &--green {
+    background-color: $color-SeaGreen;
+
+    @include focus-visible {
+      background-color: $color-Green;
+    }
+    @include any-hover {
+      background-color: $color-Green;
+    }
+  }
+
+  &--red {
+    background-color: $color-DarkRed;
+
+    @include focus-visible {
+      background-color: $color-Maroon;
+    }
+    @include any-hover {
+      background-color: $color-Maroon;
+    }
+  }
+
+  &--blue {
+    background-color: $color-MidnightExpress;
+
+    @include focus-visible {
+      background-color: $color-Navy;
+    }
+    @include any-hover {
+      background-color: $color-Navy;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-width: 340px;
+  min-height: 100dvh;
+  margin: 0;
+  padding: 0;
+  font-family: $ff-sans-serif;
+  font-weight: 400;
+  color: $color-Black;
+  background-color: rgba($color-LightGreen, .2);
+
+  overflow-wrap: anywhere;
+}
+
+main {
+  flex-grow: 1;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+
+  object-fit: cover;
+}
+
+a {
+  color: $color-Black;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Style to hide the spinner buttons */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  margin: 0;
+
+  -webkit-appearance: none;
+}
+
+input[type=number] {
+  appearance: textfield;
+}
