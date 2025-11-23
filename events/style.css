@@ -1,0 +1,87 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  padding: 50px 0;
+  font-family: sans-serif;
+}
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1230px;
+  margin: 0 auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.block-form {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.block-form__input {
+  padding: 0 10px;
+  width: 100%;
+  flex-grow: 5;
+  margin-right: 20px;
+  background-color: silver;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.block-form__btn {
+  flex-grow: 2;
+  padding: 15px 15px;
+  border-radius: 5px;
+  font-family: monospace;
+  color: aliceblue;
+  background-color: brown;
+  transition: background-color .2s ease-in-out;
+  font-size: 18px;
+}
+
+.block-form__btn:hover {
+  background-color: rgba(165, 42, 42, 0.85);
+}
+
+.block-form__btn:active {
+background-color: rgb(123, 16, 16);
+}
+
+.info-color {
+  margin-bottom: 5px;
+  font-family: monospace;
+  font-size: 18px;
+}
+
+.block-paint {
+  width: 100%;
+  padding: 50px 0;
+  border: 5px groove gray;
+}

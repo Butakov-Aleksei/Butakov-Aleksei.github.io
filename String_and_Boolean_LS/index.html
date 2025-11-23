@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=0">
+  <title>Облачное хранилище</title>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="main.js"></script>
+  <script defer src="updateHtml.js"></script>
+</head>
+
+<body>
+  <section class="section">
+    <div class="container section__container">
+      <h2 class="section__title">
+        Строки. Методы substring(), toUpperCase() и toLowerCase(), trim(), конкатенация строк и их длина.
+      </h2>
+      <div class="section__block">
+        <h3 class="section__subtitle">Введите в текстовое поле какой-нибудь текст, и посмотрите, как введенное вами
+          значение будет преобразованно ниже.</h3>
+        <textarea name="text" rows="6" id="text" class="section__textarea"></textarea>
+        <input class="section__input" type="number" id="start">
+        <input class="section__input" type="number" id="end">
+        <div class="section__update-block">
+          <h4 class="section__subtitle-info">Текст без изменений:</h4>
+          <p class="section__text" id="simpleText">пусто</p>
+        </div>
+        <div class="section__update-block">
+          <h4 class="section__subtitle-info">Часть текста:</h4>
+          <p class="section__text" id="substringText">пусто</p>
+        </div>
+        <div class="section__update-block">
+          <h4 class="section__subtitle-info">Длина текста:</h4>
+          <p class="section__text" id="lengthText">пусто</p>
+        </div>
+        <div class="section__update-block">
+          <h4 class="section__subtitle-info">Длина текста без пробелов:</h4>
+          <p class="section__text" id="lengthTextWithoutSpaces">пусто</p>
+        </div>
+        <div class="section__update-block">
+          <h4 class="section__subtitle-info">Количество пробелов:</h4>
+          <p class="section__text" id="countSpaces">пусто</p>
+        </div>
+        <div class="section__update-block">
+          <h4 class="section__subtitle-info">Текст в верхнем регистре:</h4>
+          <p class="section__text" id="upperText">пусто</p>
+        </div>
+        <div class="section__update-block">
+          <h4 class="section__subtitle-info">Текст в нижнем регистре:</h4>
+          <p class="section__text" id="lowerText">пусто</p>
+        </div>
+        <div class="section__update-block">
+          <h4 class="section__subtitle-info">Текст без пробелов по краям:</h4>
+          <p class="section__text" id="trimText">пусто</p>
+        </div>
+        <div class="section__update-block">
+          <h4 class="section__subtitle-info">Текст, в котором первая буква всегда заглавная:</h4>
+          <p class="section__text" id="firstLetterUpper">пусто</p>
+        </div>
+        <div class="section__update-block">
+          <h4 class="section__subtitle-info">Текст, в котором первая буква всегда заглавная, остальные — маленькие, без
+            пробелов по краям, между словами один пробел:</h4>
+          <p class="section__text" id="normalizedText">пусто</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
