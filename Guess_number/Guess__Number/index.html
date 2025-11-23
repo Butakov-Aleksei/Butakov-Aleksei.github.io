@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+  <title>Угадай число</title>
+</head>
+
+<body>
+  <main>
+    <section class="guess-number">
+      <div class="guess-number__container container">
+        <h1 class="main-title guess-number__main-title">
+          Игра "Угадай число"! 😉
+        </h1>
+        <details class="guess-number__details">
+          <summary class="guess-number__summary">
+            Описание игры
+            <span class="guess-number__summary-btn btn" aria-hidden="true">
+              &cudarrr;
+            </span>
+          </summary>
+        </details>
+        <div class="guess-number__details-body">
+          <div class="guess-number__details-content">
+            <p class="guess-number__descr">
+              Попробуйте сыграть в&nbsp;игру &laquo;Угадай число&raquo;. Правила очень просты: программа загадала
+              случайное целое число от&nbsp;0&nbsp;до&nbsp;100, которое вам нужно отгадать. Для старта нажмите
+              &laquo;начать игру&raquo;. В&nbsp;поле ниже введите
+              число, и&nbsp;нажимайте на&nbsp;кнопку &laquo;Отгадать число&raquo;. В&nbsp;процессе игры можно брать
+              подсказки — жми кнопку "подсказка". Сброс игры&nbsp;&mdash; жми крестик. Интересно, сколько попыток вам
+              потребуется для разгадки? 🧐 Удачи 😎
+            </p>
+          </div>
+        </div>
+        <div class="guess-number__start-block">
+          <button class="guess-number__btn btn btn--blue btn--start" id="btnStartGame" type="button">
+            Начать игру
+          </button>
+          <div class="guess-number__wrap-list">
+            <ul class="guess-number__list-numbers" id="listNumbers"></ul>
+          </div>
+          <div class="guess-number__wrap-list">
+            <ol class="guess-number__list-result" id="listResult"></ol>
+          </div>
+        </div>
+        <div class="guess-number__wrap">
+          <div class="custom-input custom-input--span-4">
+            <input class="custom-input__field" type="number" inputmode="numeric" name="numInput" id="numInput"
+              placeholder="Введите число" autocomplete="off" min="0" max="100" step="1" autofocus disabled>
+            <label class="custom-input__label" for="numInput">
+              Ваше&nbsp;число:
+            </label>
+          </div>
+          <button class="btn btn--green guess-number__btn guess-number__btn--span-2 guess-number__btn--span-3"
+            id="btnGuess" type="button" disabled>
+            Отгадать число
+          </button>
+          <button class="btn btn--green guess-number__btn guess-number__btn--span-2" id="btnHint" type="button"
+            disabled>
+            Подсказка
+          </button>
+          <button class="btn btn--red guess-number__btn guess-number__btn--reset" id="btnReset" type="reset"
+            aria-label="Сбросить" title="Сбросить" disabled>
+            x
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

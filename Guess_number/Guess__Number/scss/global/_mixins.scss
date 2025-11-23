@@ -1,0 +1,45 @@
+@mixin vp-1023 {
+  @media (max-width: $vp-tablet) {
+    @content;
+  }
+}
+
+@mixin vp-767 {
+  @media (max-width: $vp-mobile) {
+    @content;
+  }
+}
+
+@mixin any-pointer {
+  @media (any-pointer: coarse) {
+    @content;
+  }
+}
+
+@mixin focus-visible {
+  outline: none;
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    @content;
+  }
+}
+
+@mixin any-hover {
+  @media (any-hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin width-child($c-gap, $r-gap, $offsets) {
+  column-gap: $c-gap;
+  row-gap: $r-gap;
+
+  & > * {
+    width: calc((100% - (#{$c-gap} * #{$offsets})) / (#{$offsets} + 1));
+  }
+}

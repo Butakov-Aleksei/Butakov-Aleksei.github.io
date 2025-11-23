@@ -1,0 +1,113 @@
+.custom-checkbox {
+  display: flex;
+  flex-direction: column;
+
+  $root: &;
+
+  &--error {
+    ~ #{$root}__show-error-wrap {
+      grid-template-rows: 1fr;
+
+      #{$root}__error {
+        visibility: visible;
+        overflow: auto;
+        opacity: 1;
+        transform: translateY(5px);
+      }
+    }
+  }
+
+  &__field {
+    @include focus-visible {
+      + #{$root}__label {
+        color: $color-Blue;
+      }
+
+      + #{$root}__label::before {
+        border-color: $color-Blue;
+      }
+    }
+
+    &:checked {
+      + #{$root}__label #{$root}__icon {
+        visibility: visible;
+        opacity: 1;;
+      }
+
+      + #{$root}__label::before {
+        border-color: $color-Blue;
+        background-color: $color-Blue;
+      }
+    }
+  }
+
+  &__label {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 0 40px;
+    font-size: clamp(1rem, .923rem + .38vw, 1.25rem);
+    color: $color-Black;
+    cursor: pointer;
+    user-select: none;
+    transition: color $transition-300;
+
+    @include any-hover {
+      color: $color-Blue;
+
+      &::before {
+        border-color: $color-Blue;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 24px;
+      height: 24px;
+      border: 2px solid $color-Silver;
+      border-radius: 4px;
+      background-color: transparent;
+      transition: background-color $transition-300, border-color $transition-300;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__text {
+    font-weight: 600;
+    line-height: 120%; /* 21.6px */
+    color: inherit;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    visibility: hidden;
+    color: $color-White;
+    opacity: 0;
+    transition: visibility $transition-300, opacity $transition-300;
+    transform: translateY(-50%);
+  }
+
+  &__show-error-wrap {
+    display: grid;
+    transition: grid-template-rows $transition-300;
+
+    grid-template-rows: 0fr;
+  }
+
+  &__error {
+    visibility: hidden;
+    overflow: hidden;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 130%; /* 23.4px */
+    color: $color-Red;
+    opacity: 0;
+    transition: visibility $transition-300, overflow $transition-300, transform $transition-300, opacity $transition-300;
+    transform: translateY(-10px);
+  }
+}
