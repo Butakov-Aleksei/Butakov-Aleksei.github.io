@@ -140,7 +140,7 @@
   }
 
   &__list-numbers {
-    padding: 1px 0;
+    padding: 6px 0;
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
@@ -148,6 +148,7 @@
     box-shadow: 0 0 15px $color-Grey;
     border-radius: 4px;
     gap: 8px 0;
+    cursor: pointer;
   }
 
   &__item-numbers {
