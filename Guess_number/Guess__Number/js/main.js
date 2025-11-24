@@ -47,9 +47,9 @@ function createHintText() {
     case hintOrder === 3:
       hintTotal++;
       if (isNum) {
-        hintText = `${"🌟".repeat(
-          hintTotal
-        )} Одна из цифр вашего числа ${currentNumber} существует в загаданном числе`;
+        hintText = `${hintTotal}-🌟 Или ${currentNumber
+          .split("")
+          .join(", или ")} есть в этом числе`;
         filteredNumArr = filteredNumArr.filter((item) => {
           return String(currentNumber)
             .split("")
@@ -64,11 +64,9 @@ function createHintText() {
           numbersList.innerHTML = "";
           createItemNumbersList(filteredNumArr);
           highlightItemCurrentNumber();
-        }, 1000);
+        }, 600);
       } else {
-        hintText = `${"🌟".repeat(
-          hintTotal
-        )} Ни одна из цифр вашего числа ${currentNumber} не существует в загаданном числе`;
+        hintText = `${hintTotal}-🌟 Ни одна из цифр вашего числа ${currentNumber} не существует в заданном числе`;
 
         filteredNumArr = filteredNumArr.filter((item) => {
           return String(currentNumber)
@@ -76,6 +74,7 @@ function createHintText() {
             .every((num) => !String(item).includes(num));
         });
         console.log(filteredNumArr);
+        hintOrder--;
         numbersList
           .closest(".guess-number__wrap-list")
           .classList.remove("guess-number__wrap-list--show");
@@ -83,22 +82,29 @@ function createHintText() {
           numbersList.innerHTML = "";
           createItemNumbersList(filteredNumArr);
           highlightItemCurrentNumber();
-        }, 1000);
+        }, 600);
       }
       break;
     case hintOrder === 2 && isNumFirst:
       hintTotal++;
-      hintText = `${"🌟".repeat(
-        hintTotal
-      )} Одна из цифр вашего числа ${currentNumber} является первой цифрой в загаданном числе`;
+      hintText = `${hintTotal}-🌟 Или ${currentNumber
+        .split("")
+        .join(", или ")} — первая цифра в этом числе.`;
+      hintOrder--;
+      break;
+    case hintOrder === 2 && isNumLast:
+      hintTotal++;
+      hintText = `${hintTotal}-🌟 Или ${currentNumber
+        .split("")
+        .join(", или ")} — последняя цифра в этом числе.`;
       hintOrder--;
       break;
     case hintOrder === 2 && !isNum:
       hintTotal++;
-      hintText = `${"🌟".repeat(
-        hintTotal
-      )} Ни одна из цифр вашего числа ${currentNumber} не существует в загаданном числе`;
-      hintOrder++;
+      hintText = `${hintTotal}-🌟 Таких цифр как ${currentNumber
+        .split("")
+        .join(", ")} нет в этом числе`;
+      hintOrder--;
       filteredNumArr = filteredNumArr.filter((item) => {
         return String(currentNumber)
           .split("")
@@ -112,20 +118,27 @@ function createHintText() {
         numbersList.innerHTML = "";
         createItemNumbersList(filteredNumArr);
         highlightItemCurrentNumber();
-      }, 1000);
+      }, 600);
       break;
     case hintOrder === 1 && isNumLast:
       hintTotal++;
-      hintText = `${"🌟".repeat(
-        hintTotal
-      )} Одна из цифр вашего числа ${currentNumber} является последней цифрой в загаданном числе`;
+      hintText = `${hintTotal}-🌟 Или ${currentNumber
+        .split("")
+        .join(", или ")} — последняя цифра в этом числе.`;
+      hintOrder--;
+      break;
+    case hintOrder === 1 && isNumFirst:
+      hintTotal++;
+      hintText = `${hintTotal}-🌟 Или ${currentNumber
+        .split("")
+        .join(", или ")} — первая цифра в этом числе.`;
       hintOrder--;
       break;
     case hintOrder === 1 && !isNum:
       hintTotal++;
-      hintText = `${"🌟".repeat(
-        hintTotal
-      )} Ни одна из цифр вашего числа ${currentNumber} не существует в загаданном числе`;
+      hintText = `${hintTotal}-🌟 Таких цифр как ${currentNumber
+        .split("")
+        .join(", ")} нет в этом числе`;
       filteredNumArr = filteredNumArr.filter((item) => {
         return String(currentNumber)
           .split("")
@@ -139,13 +152,31 @@ function createHintText() {
         numbersList.innerHTML = "";
         createItemNumbersList(filteredNumArr);
         highlightItemCurrentNumber();
-      }, 1000);
-      hintOrder = 3;
+      }, 600);
+      hintOrder--;
+      break;
+    case hintOrder === 0:
+      hintTotal++;
+      hintOrder--;
+      if (currentNumber[0] === String(randomCurrent)[0]) {
+        hintText = `${hintTotal}-🌟 Вы близки к разгадке 🧐 ${currentNumber[0]} — это первая цифра в этом числе`;
+      } else if (currentNumber.at(-1) === String(randomCurrent).at(-1)) {
+        hintText = `${hintTotal}-🌟 Вы близки к разгадке 🧐 ${currentNumber.at(
+          -1
+        )} — это последняя цифра в этом числе`;
+      } else {
+        hintText = `${hintTotal}🌟-я Подсказка: ${
+          currentNumber[0]
+        } — не первая цифра в этом числе, а цифра ${currentNumber.at(
+          -1
+        )} — не последняя. 😉`;
+      }
       break;
     default:
+      hintOrder++;
       hintTotal++;
-      hintOrder = 2;
-      hintText = `${"🌟".repeat(hintTotal)} Вы близки к разгадке 🧐`;
+
+      hintText = `${hintTotal}🌟-я Подсказка: нет, это не ${currentNumber} 😐`;
   }
   return hintText;
 }
@@ -156,7 +187,7 @@ function createGuessText() {
     btnHint.disabled = true;
     input.disabled = true;
     input.style.pointerEvents = "none";
-    return `✨ Поздравляем! Вы отгадали число ${randomCurrent} с ${count}-й попытки и с использованием ${hintTotal} подсказок.`;
+    return `✨ Поздравляем! Вы отгадали число ${randomCurrent} с ${count}-й попытки и с использованием 🌟-${hintTotal} подсказок.`;
   }
   return `➖ ${count}-я попытка, число ${currentNumber}: 🤔 Неверно....`;
 }
@@ -293,3 +324,9 @@ btnReset.addEventListener("click", (e) => {
       .some((num) => String(item).includes(num));
   });
 });
+
+numbersList
+  .closest(".guess-number__wrap-list")
+  .addEventListener("click", (e) => {
+    e.currentTarget.classList.toggle("guess-number__wrap-list--show");
+  });

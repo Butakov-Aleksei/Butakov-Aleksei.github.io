@@ -1024,7 +1024,7 @@ input[type=number] {
   grid-template-rows: 1fr;
 }
 .guess-number__list-numbers {
-  padding: 1px 0;
+  padding: 6px 0;
   overflow: hidden;
   display: flex;
   flex-wrap: wrap;
@@ -1032,6 +1032,7 @@ input[type=number] {
   box-shadow: 0 0 15px #808080;
   border-radius: 4px;
   gap: 8px 0;
+  cursor: pointer;
 }
 .guess-number__item-numbers {
   font-style: italic;
