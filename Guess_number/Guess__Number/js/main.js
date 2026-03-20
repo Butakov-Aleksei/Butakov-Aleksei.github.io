@@ -165,7 +165,7 @@ function createHintText() {
           -1
         )} — это последняя цифра в этом числе`;
       } else {
-        hintText = `${hintTotal}🌟-я Подсказка: ${
+        hintText = `${hintTotal}🌟Подсказка: ${
           currentNumber[0]
         } — не первая цифра в этом числе, а цифра ${currentNumber.at(
           -1
@@ -176,7 +176,7 @@ function createHintText() {
       hintOrder++;
       hintTotal++;
 
-      hintText = `${hintTotal}🌟-я Подсказка: нет, это не ${currentNumber} 😐`;
+      hintText = `${hintTotal}🌟Подсказка: нет, это не ${currentNumber} 😐`;
   }
   return hintText;
 }
